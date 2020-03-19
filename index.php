@@ -85,12 +85,12 @@
                                 </div>
                                 <div class="form-group"> 
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">                                              
-                                        <input type="text" id="surname" class="form-control" name="surname" placeholder="Surname" required="required" value="232">
+                                        <input type="text" id="surname" class="form-control" name="surname" placeholder="Surname" required="required" >
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input type="text" id="first" class="form-control" name="first" placeholder="Firstname" required="required" value="232">
+                                        <input type="text" id="first" class="form-control" name="first" placeholder="Firstname" required="required" >
                                     </div>
                                 </div>
                                 <div class="form-group"> 
@@ -100,14 +100,14 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input type="number" id="phone" class="form-control" name="phone" placeholder="Phone +234" required="required" value="232">
+                                        <input type="number" id="phone" class="form-control" name="phone" placeholder="Phone +234" required="required" >
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
                                         <select name="member" id="mymember" class="form-control">
-                                            <option disabled="disabled" >Are you a member of Christ Embassy?</option>
-                                            <option selected="selected"  value="Yes">Yes</option>
+                                            <option value="" >Are you a member of Christ Embassy?</option>
+                                            <option value="Yes">Yes</option>
                                             <option value="No">No</option>
                                         </select>
                                     </div>
@@ -128,7 +128,7 @@
                                 <div class="form-group">
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
                                         <select name="partner" id="mypartner" class="form-control">
-                                            <option value="" disabled="disabled">SELECT YOUR PARTNERSHIP
+                                            <option value="" >SELECT YOUR PARTNERSHIP
                                                 OPTION</option>
                                             <option value="1,000,000 Online Outreaches with Technology">1,000,000 Online Outreaches with
                                                 Technology</option>
@@ -143,7 +143,7 @@
 
                                 <div class="form-group">
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input type="number" id="amount" class="form-control" name="amount" placeholder="Amount" required="required" value="232">
+                                        <input type="number" id="amount" class="form-control" name="amount" placeholder="Amount" required="required" >
                                     </div>
                                 </div>
 
@@ -289,6 +289,7 @@
                             } );
                             $('#forme')[0].reset();
                             $('#KingschatModal').modal('hide');
+                            $("#payee2").show(500);
 
 
                         }else{
@@ -296,6 +297,7 @@
                             $.notify("There was an issue with your payment, please contact IMM support to rectify this error", {className: 'error',autoHide: false,
                             } );
                             $('#KingschatModal').modal('hide');
+                            $("#payee2").show(500);
 
                         }
 
