@@ -2,6 +2,7 @@
 session_start();
 
 
+//$con = mysqli_connect('localhost','root', 'root');
 $con = mysqli_connect('remotemysql.com','Y7zU17vNOu', 'Z3ocmC37t7');
 
 if (!$con)
@@ -9,6 +10,7 @@ if (!$con)
     echo 'Not connected to server';
 }
 
+//if (!mysqli_select_db($con, 'partner'))
 if (!mysqli_select_db($con, 'Y7zU17vNOu'))
 {
     echo 'Database not selected';
@@ -25,10 +27,12 @@ if (isset($_POST['title'])){
     $zonal = $_POST['zonal'];
     $partner = $_POST['partner'];
     $amount =  $_POST['amount'];
+    $country =  $_POST['country'];
     $type =  $_POST['type'];
 
-    $sql = "INSERT INTO form (title,surname,firsty,email,phone,member,zone,partner,amount,type) VALUES ('$title', '$surname', 
-'$firsty', '$email', '$phone', '$member', '$zonal', '$partner','$amount','$type')";
+    $sql = "INSERT INTO form (title,surname,firsty,email,phone,member,zone,partner,amount,type,country) VALUES ('$title', 
+'$surname', 
+'$firsty', '$email', '$phone', '$member', '$zonal', '$partner','$amount','$type','$country')";
 
     if (!mysqli_query($con, $sql))
     {
