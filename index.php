@@ -21,6 +21,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="build/css/intlTelInput.css">
 </head>
 
 <body>
@@ -65,7 +66,7 @@
                                 }
                             ?>
                             <a class="fxt-logo"></a><br />
-                            <h2>IMM GLOBAL PARTNER NETWORK</h2>
+                            <h2>IMM GLOBAL PARTNERS NETWORK</h2>
                             <h6>Become a global partner  and  reach billions of people across the globe.</h6>
                         </div>                            
                         <div class="fxt-form">
@@ -92,16 +93,18 @@
                                         <input type="text" id="first" class="form-control" name="first" placeholder="Firstname" required="required" >
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
+                                        <input type="number" id="phone" class="form-control" name="phone" placeholder="Phone
+                                        +234" required="required" >
+                                    </div>
+                                </div>
                                 <div class="form-group"> 
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">                                              
                                         <input type="email" id="email" class="form-control" name="email" placeholder="Email" required="required" >
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input type="number" id="phone" class="form-control" name="phone" placeholder="Phone +234" required="required" >
-                                    </div>
-                                </div>
+
                                 <div class="form-group">
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
                                         <select name="member" id="mymember" class="form-control">
@@ -514,6 +517,34 @@
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
     <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="build/js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            // allowDropdown: false,
+            // autoHideDialCode: false,
+            // autoPlaceholder: "off",
+             dropdownContainer: document.body,
+            // excludeCountries: ["us"],
+            // formatOnDisplay: false,
+            // geoIpLookup: function(callback) {
+            //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+            //     var countryCode = (resp && resp.country) ? resp.country : "";
+            //     callback(countryCode);
+            //   });
+            // },
+             hiddenInput: "full_number",
+             //initialCountry: "auto",
+            // localizedCountries: { 'de': 'Deutschland' },
+            // nationalMode: false,
+            // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+            // placeholderNumberType: "MOBILE",
+            // preferredCountries: ['cn', 'jp'],
+             separateDialCode: true,
+            utilsScript: "build/js/utils.js",
+        });
+    </script>
     <script>
 
         $("#zonalBox").hide();
@@ -538,12 +569,16 @@
             var first = $('input[name=first]').val();
             var surname = $('input[name=surname]').val();
             var email = $('input[name=email]').val();
-            var phone = $('input[name=phone]').val();
+            var phone = $('input[name=full_number]').val();
             var partner = $( "#mypartner" ).val();
             var zonal = $( "#myzonal" ).val();
             var member = $( "#mymember" ).val();
             var amount = $('input[name=amount]').val();
             var country = $( "#mycountry" ).val();
+
+
+
+            alert(phone);
 
 
             if(title != "" && first != "" && surname != "" && email != "" && phone != "" && partner != "" && member != "" && amount != "" && country !="") {
