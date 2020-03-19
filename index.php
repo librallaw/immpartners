@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="form-group"> 
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">                                              
-                                        <input type="email" id="email" class="form-control" name="email" placeholder="Email" required="required" value="librallaw@yahoo.com">
+                                        <input type="email" id="email" class="form-control" name="email" placeholder="Email" required="required" >
                                     </div>
                                 </div>
                                 <div class="form-group">
