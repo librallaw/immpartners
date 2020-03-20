@@ -669,7 +669,7 @@
 //                    //if number is on kingschat then process
                         if(data){
                             NProgress.done();
-                            $.notify("Your registration was successful", {className: 'success',autoHide: false,
+                            $.notify("You are successfully signed up please check your email for your discount code on Ceflix Images", {className: 'success',autoHide: false,
                             } );
                             $('#forme')[0].reset();
                             $('#KingschatModal').modal('hide');
@@ -810,7 +810,7 @@
 //                    //if number is on kingschat then process
                     if(data){
                         NProgress.done();
-                        $.notify("Your registration was successful", {className: 'success',autoHide: false,
+                        $.notify("You are successfully signed up please check your email for your discount code on Ceflix Images", {className: 'success',autoHide: false,
                         } );
                         $('#forme')[0].reset();
                         $("#payee").show(500);
