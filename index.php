@@ -95,8 +95,9 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input type="number" id="phone" class="form-control" name="phone" placeholder="Phone
-                                        +234" required="required" >
+                                        <input type="text" id="phone" class="" name="phone"
+                                               placeholder="Enter phone" required="required"
+                                               style="width:100% !important;">
                                     </div>
                                 </div>
                                 <div class="form-group"> 
@@ -517,31 +518,32 @@
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
     <script src="https://js.paystack.co/v1/inline.js"></script>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
     <script src="build/js/intlTelInput.js"></script>
     <script>
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
+           // getNumber:true,
             // allowDropdown: false,
             // autoHideDialCode: false,
             // autoPlaceholder: "off",
              dropdownContainer: document.body,
             // excludeCountries: ["us"],
-            // formatOnDisplay: false,
+            // formatOnDisplay: true,
             // geoIpLookup: function(callback) {
             //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
             //     var countryCode = (resp && resp.country) ? resp.country : "";
             //     callback(countryCode);
             //   });
             // },
-             hiddenInput: "full_number",
+            // hiddenInput: "full_number",
              //initialCountry: "auto",
             // localizedCountries: { 'de': 'Deutschland' },
              nationalMode: false,
             // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-            // placeholderNumberType: "MOBILE",
+             //placeholderNumberType: "MOBILE",
             // preferredCountries: ['cn', 'jp'],
-            // separateDialCode: true,
+             //separateDialCode: true,
             //utilsScript: "build/js/utils.js",
         });
     </script>
@@ -556,7 +558,7 @@
             if(amountex == "Yes"){
                 $("#zonalBox").show(500);
             }else{
-                ("#zonalBox").hide();
+                $("#zonalBox").hide();
             }
 
         });
@@ -578,7 +580,8 @@
 
 
 
-            //alert(var countryCode = $('#phone-number-field').intlTelInput("getDialCode"););
+            //var countryCode = $('#phone').intlTelInput("getDialCode");
+           // alert(phone);
 
 
             if(title != "" && first != "" && surname != "" && email != "" && phone != "" && partner != "" && member != "" && amount != "" && country !="") {
