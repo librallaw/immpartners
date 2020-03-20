@@ -537,12 +537,12 @@
              hiddenInput: "full_number",
              //initialCountry: "auto",
             // localizedCountries: { 'de': 'Deutschland' },
-            // nationalMode: false,
+             nationalMode: false,
             // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
             // placeholderNumberType: "MOBILE",
             // preferredCountries: ['cn', 'jp'],
-             separateDialCode: true,
-            utilsScript: "build/js/utils.js",
+            // separateDialCode: true,
+            //utilsScript: "build/js/utils.js",
         });
     </script>
     <script>
@@ -569,7 +569,7 @@
             var first = $('input[name=first]').val();
             var surname = $('input[name=surname]').val();
             var email = $('input[name=email]').val();
-            var phone = $('input[name=full_number]').val();
+            var phone = $('input[name=phone]').val();
             var partner = $( "#mypartner" ).val();
             var zonal = $( "#myzonal" ).val();
             var member = $( "#mymember" ).val();
@@ -578,7 +578,7 @@
 
 
 
-            alert(phone);
+            //alert(var countryCode = $('#phone-number-field').intlTelInput("getDialCode"););
 
 
             if(title != "" && first != "" && surname != "" && email != "" && phone != "" && partner != "" && member != "" && amount != "" && country !="") {
